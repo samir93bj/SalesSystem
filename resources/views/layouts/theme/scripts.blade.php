@@ -13,3 +13,14 @@
 
 <script src="{{ asset('plugins/apex/apexcharts.min.js') }}"></script>
 <script src="{{ asset('assets/js/dashboard/dash_1.js') }}"></script>
+<script>
+    function noty(msg, option=1){
+        snackbar.show({
+            text: msg.toUpperCase(),
+            actionText: 'CERRAR',
+            actionTextColor: '#fff',
+            backgroundColor: option == 1 ? '#3b3f5c' : '#e7515a',
+            pos: 'top-right'
+        })
+    }
+</script>
