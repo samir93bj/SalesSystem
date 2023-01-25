@@ -1,4 +1,5 @@
 
+<!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
 <script src="{{ asset('assets/js/libs/jquery-3.1.1.min.js') }}"></script>
 <script src="{{ asset('bootstrap/js/popper.min.js') }}"></script>
 <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
@@ -10,9 +11,13 @@
     });
 </script>
 <script src="{{ asset('assets/js/custom.js') }}"></script>
+<!-- END GLOBAL MANDATORY SCRIPTS -->
 
+<!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 <script src="{{ asset('plugins/apex/apexcharts.min.js') }}"></script>
-<script src="{{ asset('assets/js/dashboard/dash_1.js') }}"></script>
+<script src="{{ asset('assets/js/dashboard/dash_2.js') }}"></script>
+
+<!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 <script>
     function noty(msg, option=1){
         snackbar.show({
