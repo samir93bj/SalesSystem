@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('sale_details', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->id();
             $table->decimal('price', 10,2);
             $table->decimal('quantity', 10,2);

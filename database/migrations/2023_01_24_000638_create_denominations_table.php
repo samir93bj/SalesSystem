@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('denominations', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->id();
             $table->enum('type', ['BILLETE','MONEDA','TARJETA','OTRO'])->default('BILLETE');
             $table->string('value', 255);
