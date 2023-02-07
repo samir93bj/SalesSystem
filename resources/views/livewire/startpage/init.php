@@ -1,6 +1,4 @@
-@extends('layouts.theme.app')
-@section('content')
-<div class="row sales">
+<div class="row sales layout-top-spacing">
     <div class="col-sm-12">
         <div class="widget widget-chat-one">
             <div class="widget-heading">
@@ -9,7 +7,7 @@
                 </h4>
                 <ul class="tabs tab-pills">
                     <li>
-                        <a href="javascript:void(0)" class="btn bg-dark" data-toggle="model" data-target="#theModal">Agregar</a>
+                        <a href="javascript:void(0)" class="tabmenu bg-dark" data-toggle="model" data-target="#theModal">Agregar</a>
                     </li>
                 </ul>
             </div>
@@ -31,7 +29,7 @@
                                     <h6>Category Name</h6>
                                 </td>
                                 <td class="text-center">
-                                    <img src="" alt="imagen de ejemplo" height="70" width="80" class="rounded">
+                                    <span><img src="" alt="imagen de ejemplo" height="70" width="80" class="rounded"></span>
                                 </td>
                                 <td class="text-center">
                                     <a href="javascript:void(0)" class="btn btn-dark" title="Edit">
@@ -53,25 +51,10 @@
     </div>
     Include Form
 </div>
-<!--
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
--->
-@endsection
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+    })
+</script>
