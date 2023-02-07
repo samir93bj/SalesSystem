@@ -18,6 +18,8 @@ class CategoriesController extends Component
 
     public function render()
     {
-        return view('livewire.category.categories')->extends('layouts.theme.app')->section('content');
+        $data = Category::all();
+
+        return view('livewire.category.categories', ['categories'=>$data])->extends('layouts.theme.app')->section('content');
     }
 }
