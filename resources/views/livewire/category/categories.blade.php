@@ -30,7 +30,7 @@
                                         <h6>{{ $category->name }}</h6>
                                     </td>
                                     <td class="text-center">
-                                        <span><img src="" alt="imagen de ejemplo" height="70" width="80" class="rounded"></span>
+                                        <span><img src="asset('storage/categories/'.$category->image)" alt="imagen de ejemplo" height="70" width="80" class="rounded"></span>
                                     </td>
                                     <td class="text-center">
                                         <a href="javascript:void(0)" wire:click='Edit({{$category->id}})' class="btn btn-dark" title="Edit">
@@ -44,7 +44,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                    pagination
+                    {{$categories->links()}}
                 </div>
             </div>
 
