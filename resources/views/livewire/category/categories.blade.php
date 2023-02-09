@@ -3,11 +3,11 @@
         <div class="widget widget-chat-one">
             <div class="widget-heading">
                 <h4 class="card-title">
-                    <b>ComponentName | PageTitle</b>
+                    <b>{{$componentName}} | {{ $pageTitle }}</b>
                 </h4>
                 <ul class="tabs tab-pills">
                     <li>
-                        <a href="javascript:void(0)" class="tabmenu bg-dark" data-toggle="model" data-target="#theModal">Agregar</a>
+                        <a href="javascript:void(0)" class="btn tabmenu bg-dark" data-toggle="modal" data-target="#theModal">Agregar</a>
                     </li>
                 </ul>
             </div>
@@ -24,22 +24,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    <h6>Category Name</h6>
-                                </td>
-                                <td class="text-center">
-                                    <span><img src="" alt="imagen de ejemplo" height="70" width="80" class="rounded"></span>
-                                </td>
-                                <td class="text-center">
-                                    <a href="javascript:void(0)" class="btn btn-dark" title="Edit">
-                                        <i class="fas fa-edit"></i>
-                                    </a>
-                                    <a href="javascript:void(0)" class="btn btn-dark" title="Delete">
-                                        <i class="fas fa-trash"></i>
-                                    </a>
-                                </td>
-                            </tr>
+                            @foreach ($categories as $category)
+                                <tr>
+                                    <td>
+                                        <h6>{{ $category->name }}</h6>
+                                    </td>
+                                    <td class="text-center">
+                                        <span><img src="" alt="imagen de ejemplo" height="70" width="80" class="rounded"></span>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="javascript:void(0)" wire:click='Edit({{$category->id}})' class="btn btn-dark" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a href="javascript:void(0)" onclick="Confirm('{{$category->id}}')" class="btn btn-dark" title="Delete">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                     pagination
@@ -49,7 +51,7 @@
         </div>
 
     </div>
-    Include Form
+    @Include('livewire.category.form')
 </div>
 
 
